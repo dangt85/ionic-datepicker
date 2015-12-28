@@ -7,7 +7,8 @@ var path        = require('path'),
     uglify      = require('gulp-uglify'),
     ngHtml2Js   = require("gulp-ng-html2js"),
     htmlmin     = require('gulp-htmlmin'),
-    css2js      = require("gulp-css2js");
+    css2js      = require('gulp-css2js'),
+    cssnano     = require('gulp-cssnano');
 
 gulp.task('lint', function(done) {
   gulp.src([ './src/**/*.js', './spec/**/*.js' ])
@@ -19,7 +20,7 @@ gulp.task('lint', function(done) {
 
 gulp.task('html2js', function (done) {
   gulp.src("./src/*.html")
-    .pipe(htmlmin())
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(ngHtml2Js({
       moduleName: "ionic-datepicker.templates"
     }))
@@ -30,6 +31,7 @@ gulp.task('html2js', function (done) {
 
 gulp.task('css2js', function (done) {
   gulp.src("src/*.css")
+    .pipe(cssnano())
     .pipe(css2js())
     .pipe(gulp.dest("./dist/"))
     .on('end', done);
