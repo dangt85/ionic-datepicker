@@ -7,7 +7,7 @@ This component depends on **JQuery**, Ionic and Angular
 1) Install using bower or npm
 
 ```
-    bower i ionic-datepicker --s
+    bower i https://github.com/dangt85/ionic-datepicker.git --s
 ```
 
 2) Then you can see the following directory structure in your project folder
