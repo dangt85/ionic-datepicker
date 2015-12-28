@@ -7,19 +7,19 @@ This component depends on **JQuery**, Ionic and Angular
 1) Install using bower or npm
 
 ```
-    bower i datepicker-for-ionic --save
-    npm i datepicker-for-ionic --save
+    bower i ionic-datepicker --s
 ```
 
-2) Then you can see the following directory structure see in your project folder
+2) Then you can see the following directory structure in your project folder
 
-Give the path of  `style.css, templates.min.js and ionic-datepicker.min.js` in your `index.html` file.
+Give the path of  `ionic-datepicker.bundle.min.js` in your `index.html` file.
 
 ````html
 <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
 ````    
     
 3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic time picker
+
 ````javascript
 angular.module('mainModuleName', ['ionic', 'ionic-datepicker']){
  //
