@@ -1,5 +1,3 @@
-[![Circle CI](https://circleci.com/gh/celsomarques/ionic-datepicker.svg?style=svg)](https://circleci.com/gh/celsomarques/ionic-datepicker) [![Code Climate](https://codeclimate.com/github/celsomarques/ionic-datepicker/badges/gpa.svg)](https://codeclimate.com/github/celsomarques/ionic-datepicker) [![Test Coverage](https://codeclimate.com/github/celsomarques/ionic-datepicker/badges/coverage.svg)](https://codeclimate.com/github/celsomarques/ionic-datepicker/coverage) [![bitHound Score](https://www.bithound.io/github/celsomarques/ionic-datepicker/badges/score.svg)](https://www.bithound.io/github/celsomarques/ionic-datepicker/master)
-
 ### Dependencies ###
 
 This component depends on **JQuery**, Ionic and Angular
@@ -18,10 +16,7 @@ This component depends on **JQuery**, Ionic and Angular
 Give the path of  `style.css, templates.min.js and ionic-datepicker.min.js` in your `index.html` file.
 
 ````html
-<link href="lib/datepicker-for-ionic/dist/style.css" rel="stylesheet"> 
-<!-- path to ionic/angularjs js -->
-<script src="lib/datepicker-for-ionic/dist/templates.min.js"></script>
-<script src="lib/datepicker-for-ionic/dist/ionic-datepicker.min.js"></script>
+<script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
 ````    
     
 3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic time picker
@@ -75,9 +70,3 @@ d) `max` takes date object. Pass only if you want to restrict date.
 
 e) `callback` takes the callback function name which will be called once the date picker has been closed.
 
-
-### Screenshots ###
-
-![alt text](https://raw.githubusercontent.com/celsomarques/celsomarques.github.io/master/ionic-datepicker/screenshots/date.png "Date selection")
-![alt text](https://raw.githubusercontent.com/celsomarques/celsomarques.github.io/master/ionic-datepicker/screenshots/month.png "Month selection")
-![alt text](https://raw.githubusercontent.com/celsomarques/celsomarques.github.io/master/ionic-datepicker/screenshots/year.png "Year selection")
