@@ -45,7 +45,7 @@ gulp.task('build', [ 'html2js', 'css2js' ], function (done) {
 gulp.task('make-bundle', ['build'], function (done) {
   gulp.src([ 'dist/*.js', '!dist/*.min.js' ])
     .pipe(concat('ionic-datepicker.bundle.min.js'))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('dist/'))
     .on('end', done);
 });
@@ -58,5 +58,5 @@ gulp.task('watch', function() {
   gulp.watch([ './src/*.js', './src/template.html', './src/*.css' ], [ 'build' ]);
 });
 
-gulp.task('default', [ 'clean', 'lint', 'build' ]);
+gulp.task('default', [ 'make-bundle' ]);
 
